@@ -1,0 +1,16 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "root",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-packages": "npm install && cd api && npm install && cd ../client && npm install",
+    "start": "npm run install-packages && concurrently --kill-others \"cd api && npm start\" \"cd client && npm start\""
+  },
+  "author": "Vladimir Tsimbalenko",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.0.1"
+  }
+}
